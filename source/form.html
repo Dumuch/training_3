@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cat Energy</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body class="inner-page">
+    <header class="main-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <div class="main-nav__wrapper">
+              <a href="" class="page-header-logo">
+                <picture>
+                <!-- важно писать source от большего к меньшему -->
+                  <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img class="page-header__logo-image" src="img/logo-mobile.svg"
+                  width="33" height="38" alt="Cat Energy">
+                  <!--логотип связан
+              с блоком хеадер, это его элемент-->
+                </picture>
+              </a>
+              <img class="page-header__logo-image logo-image--mobile" src="img/logo-mobile-header.svg"
+              width="101" height="18" alt="Cat Energy">
+
+              <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+            </div>
+          </li>
+            <li class="site-nav__item"><a href="index.html">Главная</a></li>
+            <li class="site-nav__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="site-nav__item site-nav__item--active"><a>Подбор программы</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+
+    <main class="page-main">
+      <section class="filling-form">
+        <div class="container">
+          <h1 class="filling-form__title">Подбор программы</h1>
+          <p class="filling-form__description">Заполните анкету и мы подберем
+            программу питания для вашего кота</p>
+          <form action="https://echo.htmlacademy.ru" method="post" class="page-main__form">
+
+            <fieldset class="block-cat">
+              <p>
+                <label class="filling-form__info-title" for="cat-name">Имя:*</label>
+                <input id="cat-name" class="filling-form__input"
+                  type="text" name="cat-name" placeholder="Барсик" required>
+              </p>
+              <p>
+                <label class="filling-form__info-title" for="cat-weight">Вес(кг):*</label>
+                <input id="cat-weight" class="filling-form__input"
+                  type="number" name="cat-weight" placeholder="7" required>
+              </p>
+              <p>
+                <label class="filling-form__info-title" for="cat-age">Возраст(лет):</label>
+                <input id="cat-age" class="filling-form__input"
+                  type="number" name="cat-age" placeholder="7">
+              </p>
+            </fieldset>
+
+            <fieldset class="block-programs">
+              <ul class="block-programs__list">
+                <li class="block-programs__item">
+                  <input checked class="visually-hidden filter-input-radio"
+                   type="radio" name="filter-programs" value="slim" id="filter-slim">
+                    <label for="filter-slim"
+                      class="filling-form__lable lable--radio">Похудение</label>
+                </li>
+                <li class="block-programs__item">
+                  <input class="visually-hidden filter-input-radio"
+                   type="radio" name="filter-programs" value="pro" id="filter-pro">
+                    <label for="filter-pro"
+                      class="filling-form__lable lable--radio">Набор массы</label>
+                </li>
+                <li class="block-programs__item">
+                  <input class="visually-hidden filter-input-radio"
+                   type="radio" name="filter-programs" value="help" id="filter-help">
+                    <label for="filter-help"
+                      class="filling-form__lable lable--radio">Не знаю (нужен вам совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="block-holder">
+              <h2 class="filling-form__subtitle">Контактные данные
+                (владельца кота)</h2>
+                <p class="input--email">
+                  <label class="filling-form__info-title" for="holder-email">E-mail:*</label>
+                  <input id="holder-email" class="filling-form__input"
+                    type="email" name="holder-email" placeholder="Kuklachev@gmail.com" required>
+                </p>
+                <p class="input--phone">
+                  <label class="filling-form__info-title" for="holder-phone">Телефон:*</label>
+                  <input id="holder-phone" class="filling-form__input"
+                    type="phone" name="holder-phone" placeholder="8(960)900-60-90" required>
+                </p>
+            </fieldset>
+
+            <div class="block-comment">
+              <h2 class="filling-form__subtitle">Комментарий</h2>
+              <label class="visually-hidden"
+                for="holder-comment">Введите комментарий</label>
+              <textarea name="holder-comment" id="holder-comment"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+
+            <fieldset class="block-extra">
+              <h2 class="filling-form__subtitle">Дополнительно</h2>
+              <ul class="block-extra__list">
+                <li class="block-extra__item">
+                  <input checked class="visually-hidden filter-input-checkbox"
+                   type="checkbox" name="filter-sweetener" id="filter-sweetener">
+                    <label for="filter-sweetener" class="filling-form__lable lable--checkbox">Сахарозаменитель</label>
+                </li>
+                <li class="block-extra__item">
+                  <input class="visually-hidden filter-input-checkbox"
+                   type="checkbox" name="filter-water" id="filter-water">
+                    <label for="filter-water" class="filling-form__lable lable--checkbox">Питьевая вода</label>
+                </li>
+                <li class="block-extra__item">
+                  <input class="visually-hidden filter-input-checkbox"
+                   type="checkbox" name="filter-milk" id="filter-milk">
+                    <label for="filter-milk" class="filling-form__lable lable--checkbox">Молоко</label>
+                </li>
+                <li class="block-extra__item">
+                  <input class="visually-hidden filter-input-checkbox"
+                   type="checkbox" name="filter-vitamins" id="filter-vitamins">
+                    <label for="filter-vitamins" class="filling-form__lable lable--checkbox">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button type="submit" class="filling-form__button">Отправить заявку</button>
+            <span class="info-description">* - Обязательные поля</span>
+
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <section class="page-footer__contacts contacts">
+                <div class="contacts__map-wrapper">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+                        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+                        <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+                    </picture>
+                    <div class="contacts__map" id="map" aria-label="map"></div>
+                    <div class="contacts__info">
+                        <div class="contacts__container">
+                            <div class="contacts__layout">
+                                <div class="contacts__title-block">
+                                    <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+                                </div>
+                                <div class="contacts__info-block">
+                                    <address class="contacts__address">
+                                        ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+      <div class="container">
+        <div class="footer-social">
+          <ul class="social-list">
+            <li class="social-item social-item--insta"><a class="social-button" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px;"
+              	 viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
+              <style type="text/css">
+              	.st0{fill:#231F20;}
+              </style>
+              <path class="st0" d="M17,1.5c2.48,0,4.5,2.02,4.5,4.5v11c0,2.48-2.02,4.5-4.5,4.5H6.01c-2.48,0-4.5-2.02-4.5-4.5V6
+              	c0-2.48,2.02-4.5,4.5-4.5L17,1.5 M17,0H6.01c-3.3,0-6,2.7-6,6v11c0,3.3,2.7,6,6,6h11c3.3,0,5.99-2.7,5.99-6V6C23,2.7,20.3,0,17,0
+              	L17,0z"/>
+              <path class="st0" d="M11.51,7.08c2.44,0,4.43,1.99,4.43,4.43c0,2.44-1.99,4.43-4.43,4.43c-2.44,0-4.43-1.99-4.43-4.43
+              	C7.08,9.06,9.06,7.08,11.51,7.08 M11.51,5.58c-3.27,0-5.93,2.65-5.93,5.93s2.65,5.93,5.93,5.93s5.93-2.65,5.93-5.93
+              	S14.78,5.58,11.51,5.58L11.51,5.58z"/>
+              <circle class="st0" cx="17.65" cy="5.38" r="1.34"/>
+              </svg>
+
+                        </a>
+            </li>
+            <li class="social-item social-item--vk">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="" y="" width="30px" height="16px"
+                	 viewBox="0 0 30 15.76" style="enable-background:new 0 0 30 15.76;" xml:space="preserve">
+                <g>
+                	<path d="M23.94,15.76c-0.39,0-1.17-0.08-2.08-0.63c-0.64-0.39-1.22-0.97-1.78-1.53c-0.44-0.44-1.17-1.18-1.45-1.18
+                		c-0.27,0.08-0.48,0.92-0.48,1.57c0,0.11,0,0.77-0.47,1.21c-0.42,0.4-1.09,0.49-1.22,0.5l-1.93,0.01c-0.97,0-4.36-0.22-7.43-3.02
+                		C3.44,9.33,0.28,2.89,0.15,2.61C-0.05,2.15-0.1,1.55,0.3,1.13c0.39-0.41,1.08-0.47,1.36-0.48l4.08-0.02l0.11,0.01
+                		c0.09,0.01,0.57,0.1,0.96,0.35C7.2,1.23,7.4,1.64,7.44,1.72C7.45,1.74,8.09,3.15,8.92,4.4c1.31,1.99,1.9,2.45,2.1,2.56
+                		c0.19-0.42,0.28-1.7,0.19-2.87c0-0.49-0.1-1.1-0.25-1.28c-0.11-0.13-0.43-0.25-0.78-0.29L9.45,1.83c-0.1-0.66,0.64-1.23,1.15-1.45
+                		C11.34,0.07,12.39,0,13.75,0l0.71,0.01c1.24,0.01,1.62,0.08,2.15,0.19c1.7,0.36,1.64,1.73,1.57,3.31c-0.02,0.46-0.05,1-0.05,1.62
+                		c0,0.15,0,0.31-0.01,0.48c-0.01,0.38-0.03,1.04,0.09,1.3c0.22-0.15,0.85-0.67,2.07-2.48c0.78-1.16,1.4-2.54,1.52-2.8l0,0
+                		c0.18-0.43,0.61-0.94,1.61-0.95l4.27-0.02c0.01,0,0.17-0.02,0.38-0.02c0.98,0,1.6,0.29,1.83,0.85c0.27,0.65,0.17,1.66-2.35,4.61
+                		c-0.37,0.43-0.7,0.8-0.98,1.13c-0.6,0.68-1.22,1.38-1.24,1.59c0.05,0.17,0.66,0.67,1.25,1.15c1.53,1.25,2.53,2.26,3.03,3.07
+                		c0.52,0.76,0.43,1.33,0.26,1.68c-0.42,0.86-1.64,0.97-1.88,0.99l-3.79,0.05C24.15,15.75,24.06,15.76,23.94,15.76z M18.63,10.92
+                		c0.9,0,1.68,0.79,2.51,1.62c0.5,0.5,1.01,1.02,1.5,1.31c0.73,0.44,1.32,0.42,1.4,0.41l0.1-0.01l3.81-0.05
+                		c0.17-0.01,0.41-0.07,0.54-0.14c-0.02-0.04-0.05-0.09-0.1-0.17c-0.45-0.72-1.39-1.66-2.69-2.72c-1.18-0.96-1.8-1.47-1.86-2.24
+                		c-0.07-0.81,0.49-1.44,1.61-2.7c0.28-0.32,0.6-0.68,0.97-1.11c1.56-1.82,1.96-2.64,2.06-2.96c-0.17-0.03-0.65-0.02-0.68-0.02
+                		l-4.36,0.03c-0.19,0-0.25,0.03-0.25,0.04C23,2.63,22.36,4.03,21.53,5.26c-1.9,2.82-2.78,3.2-3.41,3.2c-0.2,0-0.4-0.05-0.57-0.15
+                		c-1-0.57-0.96-1.83-0.93-2.76c0-0.15,0.01-0.3,0.01-0.43c0-0.65,0.02-1.21,0.05-1.69c0.08-1.68,0.02-1.69-0.38-1.78
+                		c-0.41-0.09-0.7-0.15-1.86-0.16L13.75,1.5c-0.62,0-1.34,0.01-1.91,0.1c0.09,0.07,0.18,0.16,0.26,0.25c0.59,0.7,0.6,1.95,0.6,2.19
+                		c0.13,1.65,0.06,3.8-1.02,4.31c-0.19,0.09-0.39,0.14-0.6,0.14c-0.93,0-1.85-0.89-3.43-3.27C6.77,3.87,6.11,2.4,6.08,2.34
+                		C6.07,2.32,6.02,2.26,6,2.24c-0.08-0.05-0.23-0.1-0.32-0.12l-4,0.02c-0.02,0-0.05,0-0.07,0.01c0.59,1.19,3.43,6.59,6.52,9.42
+                		c2.74,2.5,5.83,2.63,6.42,2.63l1.85,0c0.05-0.01,0.22-0.06,0.27-0.1c-0.02,0.02-0.01-0.05-0.01-0.1c0-0.26,0.01-2.59,1.58-3.03
+                		C18.36,10.94,18.5,10.92,18.63,10.92z"/>
+                </g>
+                </svg>
+
+              </a>
+            </li>
+            <li class="social-item social-item--facebook">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">facebook</span>
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="28px"
+                	 viewBox="0 0 13.52 27.75" style="enable-background:new 0 0 13.52 27.75;" xml:space="preserve">
+                <g>
+                	<path d="M9.53,27.75H2.71v-12.9H0V8.47h2.63c-0.2-2.89,0.3-5,1.52-6.44C5.19,0.8,6.73,0.12,8.74,0l4.78,0v6.15H9.76
+                		C9.6,6.47,9.51,7.24,9.51,8.47h3.98v6.38H9.53V27.75z M4.22,26.25h3.82v-12.9h3.96V9.97H8.03L8.02,9.24
+                		c-0.04-2.04,0-3.78,1.01-4.46l0.19-0.13h2.8V1.5H8.78C7.22,1.59,6.07,2.08,5.29,3c-1.04,1.23-1.41,3.3-1.1,6.14l0.09,0.83H1.5v3.38
+                		h2.72V26.25z"/>
+                </g>
+              </svg>
+
+              </a>
+            </li>
+          </ul>
+        </div>
+     </div>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss">
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

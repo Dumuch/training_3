@@ -379,6 +379,29 @@ p.input--phone {
   .block-programs::after {
     content: none;
   }
+
+  .filling-form__subtitle {
+    padding-right: 40px;
+    width: fit-content;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      right: calc(100% + 40px);
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+      z-index: -1;
+    }
+
+    &::after {
+      top: 19px;
+    }
+  }
 }
 
 @media (min-width: 1300px) {

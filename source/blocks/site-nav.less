@@ -1,0 +1,115 @@
+.site-nav__list {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #111111;
+
+  text-transform: uppercase;
+
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.site-nav__item:first-child {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.site-nav__item {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .site-nav__list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-nav__item:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .site-nav__item {
+    height: 30px;
+    border: none;
+    padding-bottom: 0;
+
+    &:hover {
+      color: rgba(17, 17, 17, 0.6);
+    }
+
+    &:active {
+      color: rgba(17, 17, 17, 0.3);
+    }
+  }
+
+  .site-nav__item--active {
+    border-bottom: 2px solid #68b738;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-nav__list {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .inner-page .site-nav__list {
+    color: #111111;
+  }
+
+  .site-nav__item {
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .inner-page .site-nav__item {
+    &:hover {
+      color: rgba(17, 17, 17, 0.6);
+    }
+
+    &:active {
+      color: rgba(17, 17, 17, 0.3);
+    }
+  }
+
+  .site-nav__item--active {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .inner-page .site-nav__item--active {
+    border-bottom: 2px solid #68b738;
+  }
+
+  .site-nav__item:last-child {
+    position: relative;
+  }
+
+  .site-nav__item:last-child::after {
+    content: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 720px;
+    height: 695px;
+    background-image:url("../img/index-background-desktop.jpg");
+    z-index: -1;
+  }
+}

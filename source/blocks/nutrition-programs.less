@@ -1,0 +1,295 @@
+.nutrition-programs .container {
+  width: auto;
+  padding: 0 20px;
+}
+
+.nutrition-programs-wrapper {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+}
+
+.nutrition-programs__image {
+  display: none;
+}
+
+.nutrition-programs__title {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 320px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: #68b738;
+  }
+}
+
+.nutrition-programs__title--slimming {
+  padding-left: 10px;
+
+  // position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 7px;
+
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/cat-slim.svg");
+    background-repeat: no-repeat;
+
+  }
+}
+
+.nutrition-programs__title--weight {
+  padding-left: 40px;
+
+  // position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -9px;
+
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/cat-pro.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.nutrition-programs p {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-bottom: 20px;
+
+  font-family: "Arial";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.nutrition-programs__link {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #111111;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+
+  position: relative;
+  min-width: 150px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -40px;
+
+    width: 24px;
+    height: 11px;
+
+    background-image: url("../img/right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    right: -49px;
+    width: 33px;
+    background-image: url("../img/right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .nutrition-programs .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .nutrition-programs-wrapper {
+    height: 374px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 35px;
+}
+
+  .nutrition-programs__title {
+    font-size: 36px;
+    line-height: 37px;
+    margin: 0;
+    text-align: left;
+
+    &::before {
+      content: none;
+    }
+}
+
+  .nutrition-programs__title--weight {
+    padding-left: 0;
+  }
+
+  .nutrition-programs__title--slimming {
+    padding-left: 0;
+  }
+
+  .nutrition-programs p {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+
+  }
+
+  .nutrition-programs__image-wrapper {
+    width: 280px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 65px;
+      left: 20px;
+
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #68b738;
+      z-index: 1;
+    }
+  }
+
+  .nutrition-programs__image {
+    display: block;
+    position: relative;
+    z-index: 4;
+  }
+
+  .nutrition-programs__image--slimming {
+    width: 140px;
+    height: 194px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .nutrition-programs__image--weight {
+    width: 268px;
+    height: 112px;
+    margin-top: 100px;
+    margin-left: -20px;
+  }
+
+  .nutrition-programs__title--slimming::after {
+    content: none;
+  }
+
+  .nutrition-programs__title--weight::after {
+    content: none;
+  }
+
+  .nutrition-programs-align--left {
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 380px;
+  }
+
+  .nutrition-programs__link {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nutrition-programs .container {
+    width: 1300px;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nutrition-programs-wrapper {
+    width: 570px;
+    height: 370px;
+  }
+
+  .nutrition-programs__image-wrapper {
+    display: none;
+  }
+
+  .nutrition-programs__title--slimming {
+    padding-left: 165px;
+  }
+
+  .nutrition-programs__title--weight {
+    padding-left: 165px;
+  }
+
+  .nutrition-programs__title--slimming::after {
+    content: "";
+    width: 70px;
+    height: 97px;
+    left: 15px;
+  }
+
+  .nutrition-programs__title--weight::after {
+    content: "";
+    width: 134px;
+    height: 56px;
+    top: 15px;
+    left: -15px;
+  }
+
+  .nutrition-programs__title::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+  }
+
+  .nutrition-programs-wrapper p {
+    margin-top: 80px;
+  }
+
+  .nutrition-programs-align--left {
+    width: 470px;
+  }
+
+  .nutrition-programs__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+}

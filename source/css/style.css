@@ -2640,6 +2640,15 @@ p.input--phone::after {
   .info-description {
     width: 570px;
   }
+  .block-comment {
+    margin-top: 45px;
+  }
+  fieldset.block-extra {
+    margin-top: 45px;
+  }
+  .inner-page .page-footer {
+    margin-top: 70px;
+  }
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,

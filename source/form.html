@@ -48,51 +48,53 @@
           <p class="filling-form__description">Заполните анкету и мы подберем
             программу питания для вашего кота</p>
           <form action="https://echo.htmlacademy.ru" method="post" class="page-main__form">
+            <div class="blocks-wrapper">
+              <fieldset class="block-cat">
+                <p>
+                  <label class="filling-form__info-title" for="cat-name">Имя:*</label>
+                  <input id="cat-name" class="filling-form__input"
+                    type="text" name="cat-name" placeholder="Барсик" required>
+                </p>
+                <p>
+                  <label class="filling-form__info-title" for="cat-weight">Вес(кг):*</label>
+                  <input id="cat-weight" class="filling-form__input"
+                    type="number" name="cat-weight" placeholder="7" required>
+                </p>
+                <p>
+                  <label class="filling-form__info-title" for="cat-age">Возраст(лет):</label>
+                  <input id="cat-age" class="filling-form__input"
+                    type="number" name="cat-age" placeholder="7">
+                </p>
+              </fieldset>
 
-            <fieldset class="block-cat">
-              <p>
-                <label class="filling-form__info-title" for="cat-name">Имя:*</label>
-                <input id="cat-name" class="filling-form__input"
-                  type="text" name="cat-name" placeholder="Барсик" required>
-              </p>
-              <p>
-                <label class="filling-form__info-title" for="cat-weight">Вес(кг):*</label>
-                <input id="cat-weight" class="filling-form__input"
-                  type="number" name="cat-weight" placeholder="7" required>
-              </p>
-              <p>
-                <label class="filling-form__info-title" for="cat-age">Возраст(лет):</label>
-                <input id="cat-age" class="filling-form__input"
-                  type="number" name="cat-age" placeholder="7">
-              </p>
-            </fieldset>
-
-            <fieldset class="block-programs">
-              <ul class="block-programs__list">
-                <li class="block-programs__item">
-                  <input checked class="visually-hidden filter-input-radio"
-                   type="radio" name="filter-programs" value="slim" id="filter-slim">
-                    <label for="filter-slim"
-                      class="filling-form__lable lable--radio">Похудение</label>
-                </li>
-                <li class="block-programs__item">
-                  <input class="visually-hidden filter-input-radio"
-                   type="radio" name="filter-programs" value="pro" id="filter-pro">
-                    <label for="filter-pro"
-                      class="filling-form__lable lable--radio">Набор массы</label>
-                </li>
-                <li class="block-programs__item">
-                  <input class="visually-hidden filter-input-radio"
-                   type="radio" name="filter-programs" value="help" id="filter-help">
-                    <label for="filter-help"
-                      class="filling-form__lable lable--radio">Не знаю (нужен вам совет)</label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="block-programs">
+                <ul class="block-programs__list">
+                  <li class="block-programs__item">
+                    <input checked class="visually-hidden filter-input-radio"
+                     type="radio" name="filter-programs" value="slim" id="filter-slim">
+                      <label for="filter-slim"
+                        class="filling-form__lable lable--radio">Похудение</label>
+                  </li>
+                  <li class="block-programs__item">
+                    <input class="visually-hidden filter-input-radio"
+                     type="radio" name="filter-programs" value="pro" id="filter-pro">
+                      <label for="filter-pro"
+                        class="filling-form__lable lable--radio">Набор массы</label>
+                  </li>
+                  <li class="block-programs__item">
+                    <input class="visually-hidden filter-input-radio"
+                     type="radio" name="filter-programs" value="help" id="filter-help">
+                      <label for="filter-help"
+                        class="filling-form__lable lable--radio">Не знаю (нужен вам совет)</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
             <fieldset class="block-holder">
               <h2 class="filling-form__subtitle">Контактные данные
                 (владельца кота)</h2>
+              <div class="blocks-wrapper">
                 <p class="input--email">
                   <label class="filling-form__info-title" for="holder-email">E-mail:*</label>
                   <input id="holder-email" class="filling-form__input"
@@ -103,6 +105,7 @@
                   <input id="holder-phone" class="filling-form__input"
                     type="phone" name="holder-phone" placeholder="8(960)900-60-90" required>
                 </p>
+              </div>
             </fieldset>
 
             <div class="block-comment">

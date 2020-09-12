@@ -2585,6 +2585,62 @@ p.input--phone::after {
     text-align: left;
   }
 }
+@media (min-width: 1300px) {
+  .site-nav__list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section.filling-form {
+    margin: 0 auto;
+    width: 1220px;
+  }
+  .filling-form .container {
+    padding: 0;
+  }
+  .filling-form__title {
+    margin-left: 0;
+  }
+  .filling-form__description {
+    margin-left: 0;
+  }
+  .page-main__form {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 50px;
+  }
+  .blocks-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  fieldset.block-cat,
+  fieldset.block-programs {
+    width: 570px;
+    padding: 0;
+  }
+  .block-cat p {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .filling-form__input {
+    height: 50px;
+    box-sizing: border-box;
+  }
+  .block-cat p:last-child {
+    margin-bottom: 0;
+  }
+  fieldset.block-holder {
+    margin-top: 45px;
+  }
+  .block-holder p {
+    width: 570px;
+  }
+  .filling-form__button {
+    width: 570px;
+  }
+  .info-description {
+    width: 570px;
+  }
+}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {

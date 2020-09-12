@@ -2459,6 +2459,10 @@ p.input--phone::after {
   color: #444444;
 }
 @media (min-width: 768px) {
+  section.filling-form {
+    margin: 0 auto;
+    width: 768px;
+  }
   .filling-form__title {
     margin-top: 40px;
     font-size: 60px;
@@ -2528,6 +2532,57 @@ p.input--phone::after {
   }
   .filling-form__subtitle::after {
     top: 19px;
+  }
+  .block-holder .filling-form__subtitle {
+    margin-bottom: 40px;
+  }
+  p.input--email::after {
+    top: 19px;
+  }
+  p.input--phone::after {
+    top: 16px;
+  }
+  .lable--checkbox::before {
+    width: 40px;
+    height: 40px;
+  }
+  .lable--checkbox::after {
+    top: 13px;
+    left: 10px;
+  }
+  .block-comment .filling-form__subtitle {
+    margin-bottom: 40px;
+  }
+  .block-extra .filling-form__subtitle {
+    margin-bottom: 45px;
+  }
+  .block-extra__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .block-extra__item {
+    width: 286px;
+    height: 40px;
+    margin-bottom: 32px;
+  }
+  .filling-form__lable {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .button_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .filling-form__button {
+    width: 286px;
+    font-size: 20px;
+  }
+  .info-description {
+    width: 286px;
+    margin-top: 12px;
+    font-size: 16px;
+    text-align: left;
   }
 }
 .visually-hidden:not(:focus):not(:active),

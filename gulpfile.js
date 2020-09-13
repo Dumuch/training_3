@@ -61,15 +61,10 @@ gulp.task('serve', function(done) {
 
 gulp.task('default', gulp.series('less', 'serve'));
 
+var webp = require("gulp-webp");
 
-var webp = require('gulp-webp');
-
-var CSS = 'css';
-var IMG = 'img';
-
-gulp.task('webp', done => {
-  gulp.src(IMG + 'img/catalog/*')
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest(IMG));
-  done();
+gulp.task("webp", function () {
+  return gulp.src("img/catalog/*.{png,jpg}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("img/catalog"));
 });

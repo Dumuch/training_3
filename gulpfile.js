@@ -68,3 +68,16 @@ gulp.task("webp", function () {
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("img/catalog"));
 });
+
+
+var rename = require("gulp-rename");
+var svgstore = require("gulp-svgstore");
+
+gulp.task("sprite", function () {
+  return gulp.src("img/*.svg")
+  .pipe(svgstore({
+    inLineSvg: true
+  }))
+  .pipe(rename("sprite_2.svg"))
+  .pipe(gulp.dest("img"))
+});

@@ -35,9 +35,9 @@ var browserSync = require('browser-sync').create();
 var less = require('gulp-less');
 
 gulp.task('less', function(done) {
-    gulp.src("source/css/*.less")
+    gulp.src("css/*.less")
         .pipe(less())
-        .pipe(gulp.dest("source/css"))
+        .pipe(gulp.dest("css"))
         .pipe(browserSync.stream());
 
     done();
@@ -46,11 +46,11 @@ gulp.task('less', function(done) {
 gulp.task('serve', function(done) {
 
     browserSync.init({
-        server: "source/"
+        server: ""
     });
 
-    gulp.watch("source/blocks/*.less", gulp.series('less'));
-    gulp.watch("source/*.html").on('change', () => {
+    gulp.watch("blocks/*.less", gulp.series('less'));
+    gulp.watch("*.html").on('change', () => {
       browserSync.reload();
       done();
     });

@@ -83,42 +83,52 @@
   font-family: "Oswald","Arial",sans-serif;
   text-transform: uppercase;
   color: #444444;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid #444444;
+    outline: 0
+   }
+}
+
+.filling-form__input--error {
+  border: 2px solid #ff8282;
 }
 
 .block-holder .filling-form__input {
   padding-right: 40px;
 }
 
-p.input--email {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 17px;
-    height: 13px;
-    background-image: url("../img/mail.svg");
-    background-repeat: no-repeat;
-  }
+ p.input--email,
+ p.input--phone {
+   position: relative;
 }
 
-p.input--phone {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/phone.svg");
-    background-repeat: no-repeat;
-  }
+.input__icon--mail {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
+.input__icon--phone {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.filling-form__input:focus + .input__icon--mail,
+.filling-form__input:focus + .input__icon--phone {
+  fill: #68b738;
+}
+
+.filling-form__input--error + .input__icon--mail,
+.filling-form__input--error + .input__icon--phone {
+  fill: #ff8282;
+}
 
 .block-programs {
   position: relative;
@@ -168,7 +178,6 @@ p.input--phone {
   color: #111111;
   text-transform: uppercase;
   position: relative;
-
 }
 
 .lable--radio {
@@ -183,6 +192,10 @@ p.input--phone {
     border-radius: 50%;
   }
 
+  &:hover::before {
+     border-color: #bababa;
+  }
+
   &::after {
     content: none;
     position: absolute;
@@ -194,6 +207,20 @@ p.input--phone {
     border-radius: 50%;
   }
 }
+
+.filter-input-radio:disabled + .lable--radio::before,
+.filter-input-radio:disabled + .lable--radio::after {
+  opacity: 0.3;
+}
+
+.filter-input-radio:disabled + .filling-form__lable {
+  color: rgba(34, 34, 34, 0.3);
+}
+
+.filter-input-radio:disabled + .lable--radio:hover::before {
+  border: 1px solid #cecece;
+}
+
 
 .filter-input-radio:checked + .lable--radio::after {
   content: "";
@@ -273,6 +300,10 @@ p.input--phone {
     border: 1px solid #cecece;
   }
 
+  &:hover::before {
+     border-color: #bababa;
+  }
+
   &::after {
     content: none;
     position: absolute;
@@ -283,6 +314,19 @@ p.input--phone {
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
   }
+}
+
+.filter-input-checkbox:disabled + .lable--checkbox::before,
+.filter-input-checkbox:disabled + .lable--checkbox::after {
+  opacity: 0.3;
+}
+
+.filter-input-checkbox:disabled + .filling-form__lable {
+  color: rgba(34, 34, 34, 0.3);
+}
+
+.filter-input-checkbox:disabled + .lable--checkbox:hover::before {
+  border: 1px solid #cecece;
 }
 
 .filter-input-checkbox:checked + .lable--checkbox::after {
@@ -301,6 +345,15 @@ p.input--phone {
   line-height: 20px;
   text-transform: uppercase;
   color: #ffffff;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
 }
 
 .info-description {
@@ -363,18 +416,16 @@ p.input--phone {
     padding-left: 60px;
   }
 
-  .lable--radio {
-    &::before {
-      width: 40px;
-      height: 40px;
-    }
+  .input__icon--mail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
-    &::after {
-      top: 12px;
-      left: 12px;
-      width: 18px;
-      height: 18px;
-    }
+  .input__icon--phone {
+    position: absolute;
+    top: 16px;
+    right: 18px;
   }
 
   .block-programs__item {

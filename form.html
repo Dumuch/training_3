@@ -82,7 +82,7 @@
                         class="filling-form__lable lable--radio">Набор массы</label>
                   </li>
                   <li class="block-programs__item">
-                    <input class="visually-hidden filter-input-radio"
+                    <input disabled class="visually-hidden filter-input-radio"
                      type="radio" name="filter-programs" value="help" id="filter-help">
                       <label for="filter-help"
                         class="filling-form__lable lable--radio">Не знаю (нужен вам совет)</label>
@@ -95,16 +95,25 @@
               <h2 class="filling-form__subtitle">Контактные данные
                 (владельца кота)</h2>
               <div class="blocks-wrapper">
+
                 <p class="input--email">
                   <label class="filling-form__info-title" for="holder-email">E-mail:*</label>
                   <input id="holder-email" class="filling-form__input"
                     type="email" name="holder-email" placeholder="Kuklachev@gmail.com" required>
+                  <svg class="input__icon--mail" width="17" height="13">
+                    <use xlink:href="img/sprite-mail-phone.svg#mail"></use>
+                  </svg>
                 </p>
+
                 <p class="input--phone">
                   <label class="filling-form__info-title" for="holder-phone">Телефон:*</label>
                   <input id="holder-phone" class="filling-form__input"
                     type="phone" name="holder-phone" placeholder="8(960)900-60-90" required>
+                  <svg class="input__icon--phone" width="20" height="20">
+                    <use xlink:href="img/sprite-mail-phone.svg#phone"></use>
+                  </svg>
                 </p>
+
               </div>
             </fieldset>
 
@@ -125,7 +134,7 @@
                     <label for="filter-sweetener" class="filling-form__lable lable--checkbox">Сахарозаменитель</label>
                 </li>
                 <li class="block-extra__item">
-                  <input class="visually-hidden filter-input-checkbox"
+                  <input disabled class="visually-hidden filter-input-checkbox"
                    type="checkbox" name="filter-water" id="filter-water">
                     <label for="filter-water" class="filling-form__lable lable--checkbox">Питьевая вода</label>
                 </li>

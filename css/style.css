@@ -2215,6 +2215,15 @@
     margin: 0;
   }
 }
+.preview-wrapper-desktop {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("../desktop.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 .filling-form .container {
   padding: 0 20px;
   margin: 0 auto;

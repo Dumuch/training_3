@@ -1,48 +1,36 @@
-// var gulp = require("gulp");
-// var less = require("gulp-less");
-// var plumber = require("gulp-plumber");
-// var postcss = require("gulp-postcss");
-// var autoprefixer = require("autoprefixer");
-// var server = require("browser-sync").create();
-//
-// gulp.task("style", function () {
-//   gulp.src("source/css/style.less")
-//   .pipe(plumber())
-//   .pipe(less())
-//   .pipe(postcss([
-//     autoprefixer()
-//   ]))
-//   .pipe(gulp.dest("source/css"))
-//   .pipe(server.stream())
-// });
-//
-// gulp.task("serve", ["style"], function () {
-//   server.init({
-//     server:"source/"
-//   });
-//
-//   gulp.watch("source/blocks/*.less", ["style"]);
-//   gulp.watch("source/*.html")
-//     .on("change", server.reload);
-// });
-//
-// gulp.task("build", function (done) {
-//   run("style", done);
-// });
-
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var less = require('gulp-less');
+var postcss = require('gulp-postcss');
+var rename = require("gulp-rename");
+var svgstore = require("gulp-svgstore");
+var webp = require("gulp-webp");
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
+
+// less to css
 gulp.task('less', function(done) {
     gulp.src("css/*.less")
         .pipe(less())
         .pipe(gulp.dest("css"))
         .pipe(browserSync.stream());
-
     done();
 });
 
+// css to min.css
+gulp.task('css', function () {
+    var plugins = [
+        autoprefixer({overrideBrowserslist: ['last 1 version']}),
+        cssnano()
+    ];
+    return gulp.src('css/style.css')
+        .pipe(postcss(plugins))
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest('css'));
+});
+
+// localhost
 gulp.task('serve', function(done) {
 
     browserSync.init({
@@ -55,14 +43,12 @@ gulp.task('serve', function(done) {
       done();
     });
 
-
     done();
 });
 
-gulp.task('default', gulp.series('less', 'serve'));
+gulp.task('default', gulp.series('less','css', 'serve'));
 
-var webp = require("gulp-webp");
-
+// png or jpg to webp
 gulp.task("webp", function () {
   return gulp.src("img/catalog/*.{png,jpg}")
   .pipe(webp({quality: 90}))
@@ -70,14 +56,12 @@ gulp.task("webp", function () {
 });
 
 
-var rename = require("gulp-rename");
-var svgstore = require("gulp-svgstore");
-
+// svg to sprite.svg
 gulp.task("sprite", function () {
   return gulp.src("img/*.svg")
   .pipe(svgstore({
     inLineSvg: true
   }))
-  .pipe(rename("sprite_2.svg"))
+  .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("img"))
 });

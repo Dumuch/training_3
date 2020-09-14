@@ -4,9 +4,7 @@ var TABLET_WIDTH = 768;
 var DESKTOP_WIDTH = 1300;
 var LONGITUDE = 59.939181
 var LATITUDE = 30.321469
-
 var LATITUDE_TABLET = 30.319356
-
 var LATITUDE_DESKTOP = 30.323199
 
   var getScreenWidth = function() {

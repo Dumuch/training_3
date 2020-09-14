@@ -50,9 +50,9 @@ gulp.task('default', gulp.series('less','css', 'serve'));
 
 // png or jpg to webp
 gulp.task("webp", function () {
-  return gulp.src("img/catalog/*.{png,jpg}")
+  return gulp.src("img/1/*.{png,jpg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("img/catalog"));
+  .pipe(gulp.dest("img/1"));
 });
 
 

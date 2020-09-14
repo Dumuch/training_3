@@ -16,7 +16,8 @@
 .promo__title {
   font-family: "Oswald";
   font-weight: normal;
-  margin: 0;
+  max-width: 380px;
+  margin: 0 auto;
   padding: 0;
   font-size: 36px;
   line-height: 36px;
@@ -44,13 +45,27 @@
   display: none;
 }
 
-@media (min-width: 321px) and (max-width: 450px)  {
-  .promo {
-    background-size: 100% auto;
-  }
+.button__promo {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #68b738;
 }
 
-@media (min-width: 450px) {
+.button__promo--top {
+  display: none;
+}
+
+@media (min-width: 390px) {
   .promo {
     background-size: 450px auto;
   }
@@ -66,17 +81,20 @@
 
   .promo .container {
     width: 768px;
+    height: 800px;
     margin: 0 auto;
   }
 
   .promo__title {
+    max-width: 430px;
+    margin: 0;
     font-size: 60px;
     line-height: 60px;
     color: #000000;
   }
 
   .promo p {
-    margin-top: 30px;
+    margin-top: 35px;
     font-size: 20px;
     line-height: 20px;
     color: #000000;
@@ -85,30 +103,35 @@
   .promo__image {
     z-index: -1;
     position: absolute;
+    margin-top: 15px;
+    margin-left: -40px;
   }
 
-  .promo .container {
-    height: 800px;
+  .button__promo {
+    width: 245px;
+    margin: 0;
+    margin-top: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo .container {
+    display: flex;
+    flex-direction: row;
     width: 1220px;
-    margin: 0 auto;
     height: 600px;
+    margin: 0 auto;
+  }
+
+  .promo picture {
+    width: 680px;
   }
 
   .promo__image {
-    display: none;
-    // left: auto;
-  }
-
-  .promo__image--desktop {
-    display: block;
-    position: absolute;
-    margin-left: 490px;
-    width: fit-content;
+    z-index: 0;
+    position: inherit;
+    margin-top: 0;
+    margin-left: -15px;
   }
 
   .promo__title {
@@ -120,7 +143,15 @@
     margin-left: 80px;
   }
 
-  .button__promo-link {
+  .button__promo {
     margin-left: 80px;
+  }
+
+  .button__promo--bottom {
+    display: none;
+  }
+
+  .button__promo--top {
+    display: block;
   }
 }

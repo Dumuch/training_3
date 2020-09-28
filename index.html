@@ -6,6 +6,30 @@
     <title>Cat Energy</title>
     <link rel="stylesheet" href="css/style.css">
 
+  <script src="js/wow.min.js"></script>
+  <script type="text/javascript">
+
+  var wow = new WOW(
+{
+  boxClass:     'wow',      // animated element css class (default is wow)
+  animateClass: 'animated', // animation css class (default is animated)
+  offset:       0,          // distance to the element when triggering the animation (default is 0)
+  mobile:       true,       // trigger animations on mobile devices (default is true)
+  live:         true,       // act on asynchronously loaded content (default is true)
+  callback:     function(box) {
+    // the callback is fired every time an animation is started
+    // the argument that is passed in is the DOM node being animated
+  },
+  scrollContainer: null,    // optional scroll container selector, otherwise use window,
+  resetAnimation: true,     // reset animation on end (default is true)
+}
+);
+// если настройки не нужны, то оставляем только init()
+wow.init();
+
+  </script>
+  <!-- <script>new WOW().init();</script> -->
+
   </head>
   <body class="index-page">
     <header class="main-header">
@@ -43,7 +67,7 @@
           <div class="promo-wrapper">
             <h1 class="promo__title">Функциональное питание для котов</h1>
             <p>Занялся собой? Займись котом!</p>
-            <a href="" class="button__promo button__promo--top">Подобрать программу</a>
+            <a href="form.html" class="button__promo button__promo--top">Подобрать программу</a>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
@@ -53,7 +77,7 @@
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.png, img/index-can-tablet@2x.png 2x">
             <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="">
           </picture>
-          <a href="" class="button__promo button__promo--bottom">Подобрать программу</a>
+          <a href="form.html" class="button__promo button__promo--bottom">Подобрать программу</a>
         </div>
       </section>
 
@@ -72,7 +96,7 @@
                 по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
                 сбросить лишний вес.
               </p>
-              <a href="" class="nutrition-programs__link">Каталог Slim</a>
+              <a href="catalog.html" class="nutrition-programs__link">Каталог Slim</a>
             </div>
             <div class="nutrition-programs__image-wrapper">
               <img src="img/cat-slim.svg" width="140" height="194" alt="" class="nutrition-programs__image nutrition-programs__image--slimming">
@@ -84,7 +108,7 @@
               <p>Заработать авторитет среди дворовых котов и даже собак? Серия
                 Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a href="" class="nutrition-programs__link">Каталог Pro</a>
+              <a href="catalog.html" class="nutrition-programs__link">Каталог Pro</a>
             </div>
             <div class="nutrition-programs__image-wrapper">
               <img src="img/cat-pro.svg" width="268" height="112" alt=""
@@ -98,7 +122,7 @@
         <div class="container">
           <h3 class="application__title">Как это работает</h3>
           <ul class="application__list">
-            <li class="application__item application__item--1">
+            <li class="application__item wow application__item--1">
               <p>
                 Функциональное питание
                 содержит только полезные питательные вещества.
@@ -110,7 +134,7 @@
                 залить кипятком и готово.
               </p>
             </li>
-            <li class="application__item application__item--3">
+            <li class="application__item application__item--3 wow">
               <p>
                 Замените один-два приема обычной еды на наше
                 функциональное питание.
@@ -289,6 +313,7 @@
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss">
     </script>
+
     <script src="js/script.js"></script>
   </body>
 </html>

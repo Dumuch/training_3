@@ -987,6 +987,20 @@
   margin: 0;
   padding: 0;
 }
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.application__item--1 {
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+}
 .application__item--1::after {
   top: 15px;
   left: 18px;
@@ -996,6 +1010,10 @@
   top: 12px;
   left: 15px;
   background-image: url("../img/advantage-2.png");
+}
+.application__item--3 {
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
 }
 .application__item--3::after {
   top: 14px;
